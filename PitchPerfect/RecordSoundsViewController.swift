@@ -22,6 +22,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         stopRecordingButton.isEnabled = false
     }
     
+    /* COMMENTED OUT: No custom code
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -29,20 +30,40 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    */
     
-    
-    @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in progress"
-        stopRecordingButton.isEnabled = true
-        recordingButton.isEnabled = false
 
+       @IBAction func recordAudio(_ sender: Any) {
+    
+    // TO BE COMMENTED OUT: replaced with func configureUI for re-usability and readability
+       recordingLabel.text = "Recording in progress"
+       stopRecordingButton.isEnabled = true
+       recordingButton.isEnabled = false
+    
+    //    func configureUI(isRecording: Bool) {
+    //        stopRecordingButton.isEnabled = isRecording // to disable the button
+    //        recordingButton.isEnabled = !isRecording // to enable the button
+    //        recordingLabel.text = !isRecording ? "Tap to Record" : "Recording in Progress"
+    //    }
+        
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
 
         let session = AVAudioSession.sharedInstance()
-        try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+        
+        do {
+            
+            try session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+            // continue with the session if successful. Also, removed the forced unwrapping try! since we are using a do catch block
+            
+        } catch {
+          // handle the error
+            print(error.localizedDescription)
+            
+        }
+        
 
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
         audioRecorder.delegate = self

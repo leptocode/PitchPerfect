@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--RECORD YOUR VOICE-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-rJ-SxV">
-                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
+                                <rect key="frame" x="129.5" y="300.5" width="155" height="155"/>
                                 <state key="normal" image="RecordButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -25,13 +25,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwO-1e-5TS">
-                                <rect key="frame" x="153.5" y="545.5" width="107" height="21"/>
+                                <rect key="frame" x="153.5" y="470.5" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYM-HD-3fl">
-                                <rect key="frame" x="157" y="586.5" width="100" height="100"/>
+                                <rect key="frame" x="157" y="511.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="BSQ-LT-rvp"/>
                                     <constraint firstAttribute="height" constant="100" id="Ogp-6d-gMy"/>
@@ -50,13 +50,13 @@
                             <constraint firstItem="QYM-HD-3fl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6WI-B1-eVt"/>
                             <constraint firstItem="49Q-rJ-SxV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G7W-ka-PtE"/>
                             <constraint firstItem="AwO-1e-5TS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJv-Ta-71I"/>
-                            <constraint firstItem="AwO-1e-5TS" firstAttribute="top" secondItem="49Q-rJ-SxV" secondAttribute="bottom" constant="20" id="egy-6H-6Aj"/>
+                            <constraint firstItem="AwO-1e-5TS" firstAttribute="top" secondItem="49Q-rJ-SxV" secondAttribute="bottom" constant="15" id="egy-6H-6Aj"/>
                             <constraint firstItem="QYM-HD-3fl" firstAttribute="top" secondItem="AwO-1e-5TS" secondAttribute="bottom" constant="20" id="uUd-YZ-4XP"/>
-                            <constraint firstItem="49Q-rJ-SxV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yGE-KH-h3b"/>
+                            <constraint firstItem="49Q-rJ-SxV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="yGE-KH-h3b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="J43-JN-zlC"/>
+                    <navigationItem key="navigationItem" title="RECORD YOUR VOICE" largeTitleDisplayMode="always" id="J43-JN-zlC"/>
                     <connections>
                         <outlet property="recordingButton" destination="49Q-rJ-SxV" id="Mmo-Iv-xoM"/>
                         <outlet property="recordingLabel" destination="AwO-1e-5TS" id="kPa-4Y-dr6"/>
@@ -66,9 +66,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472.46376811594206" y="117.1875"/>
+            <point key="canvasLocation" x="571" y="117"/>
         </scene>
-        <!--Play Sounds View Controller-->
+        <!--PLAY IT BACK-->
         <scene sceneID="ZUS-Hl-BzN">
             <objects>
                 <viewController id="fAD-Xl-cqu" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,8 +76,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WYk-rW-Yhp" userLabel="Vertical">
-                                <rect key="frame" x="0.0" y="283" width="414" height="330"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WYk-rW-Yhp" userLabel="Vertical">
+                                <rect key="frame" x="0.0" y="293" width="414" height="310"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pa4-yF-bsX" userLabel="Horizontal 1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
@@ -99,7 +99,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H6e-88-4Je" userLabel="Horizontal 2">
-                                        <rect key="frame" x="0.0" y="120" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="110" width="414" height="90"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62O-eP-thY" userLabel="High Pitch">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="90"/>
@@ -118,7 +118,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wgC-aV-mhw" userLabel="Horizontal 3">
-                                        <rect key="frame" x="0.0" y="240" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="220" width="414" height="90"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtn-tv-nSf" userLabel="Echo">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="90"/>
@@ -161,7 +161,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="idg-pc-0Py"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YTf-wn-EVA"/>
+                    <navigationItem key="navigationItem" title="PLAY IT BACK" largeTitleDisplayMode="always" id="YTf-wn-EVA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ZCC-86-y4B"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="chipmunkButton" destination="62O-eP-thY" id="7zR-gd-W3M"/>
                         <outlet property="echoButton" destination="gtn-tv-nSf" id="KR1-WW-gaD"/>
@@ -174,16 +176,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWn-7y-ebD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757.9710144927537" y="68.303571428571431"/>
+            <point key="canvasLocation" x="1432" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sGc-MV-oFQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5vz-p1-4yc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4FB-Rk-23o">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4FB-Rk-23o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                            <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                            <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

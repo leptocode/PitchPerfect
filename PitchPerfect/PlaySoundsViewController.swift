@@ -34,7 +34,7 @@ class PlaySoundsViewController: UIViewController {
         case .slow:
             playSound(rate: 0.5)
         case .fast:
-            playSound(rate: 1.5)
+            playSound(rate: 2.0)
         case .chipmunk:
             playSound(pitch: 1000)
         case .vader:
@@ -61,15 +61,5 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureUI(.notPlaying)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
